@@ -19,7 +19,7 @@ public class GreetController {
 
     private final Bucket bucket;
     public GreetController() {
-        Bandwidth limit = Bandwidth.classic(5, Refill.greedy(5, Duration.ofSeconds(1)));
+        Bandwidth limit = Bandwidth.classic(5, Refill.greedy(100, Duration.ofSeconds(1)));
         this.bucket = Bucket4j.builder()
                 .addLimit(limit)
                 .build();
