@@ -6,7 +6,7 @@ RUN echo 'Asia/Shanghai' >/etc/timezone
 ENV JAVA_OPTS ''
 
 WORKDIR /app
-ADD target/cloud-native-project-0.0.1-SNAPSHOT.jar .
+ADD target/prometheus-test-demo-0.0.1-SNAPSHOT.jar .
 
 
 ENTRYPOINT ["sh", "-c", "set -e && java -XX:+PrintFlagsFinal \
@@ -14,4 +14,4 @@ ENTRYPOINT ["sh", "-c", "set -e && java -XX:+PrintFlagsFinal \
                                            -XX:HeapDumpPath=/heapdump/heapdump.hprof \
                                            -XX:+UnlockExperimentalVMOptions \
                                            -XX:+UseCGroupMemoryLimitForHeap \
-                                           $JAVA_OPTS -jar cloud-native-project-0.0.1-SNAPSHOT.jar"]
+                                           $JAVA_OPTS -jar prometheus-test-demo-0.0.1-SNAPSHOT.jar"]
