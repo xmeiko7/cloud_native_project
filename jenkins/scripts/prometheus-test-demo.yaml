@@ -4,7 +4,7 @@ metadata:
   labels:
     app: prometheus-test-demo
   name: prometheus-test-demo
-  namespace: default
+  namespace: nju05
 spec:
   replicas: 1
   selector:
