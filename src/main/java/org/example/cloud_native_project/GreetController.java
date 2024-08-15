@@ -23,7 +23,7 @@ public class GreetController {
 
     public GreetController(MeterRegistry meterRegistry) {
         this.requestCounter = Counter.builder("api_requests_total")
-                .description("Total number of requests to your API")
+                .description("Total number of requests to  API")
                 .register(meterRegistry);
     }
     @GetMapping("/greet")
