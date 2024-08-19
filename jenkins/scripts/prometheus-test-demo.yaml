@@ -23,6 +23,8 @@ spec:
       containers:
       - image: harbor.edu.cn/library/prometheus-test-demo:{VERSION}
         name: cloud-native-project
+      imagePullSecrets:
+        - name: nju-05
 ---
 apiVersion: v1
 kind: Service
